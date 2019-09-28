@@ -42,17 +42,13 @@ func main() {
 		"##",
 	}
 
-	// Lets print unsorted array
 	fmt.Println("Unsorted array")
 	for _,e := range a {
 		fmt.Println(e)
 	}
 	
-	// Sorting array here
 	a = selectionSorted(a)
-	// fmt.Printf("\nIterated %v times.\n", iterations)
 
-	// Lets print sorted array
 	fmt.Println("\nSorted array")
 	for _,e := range a {
 		fmt.Println(e)
