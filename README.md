@@ -4,10 +4,11 @@ My data structure practice.
 .
 ├── golang
 │   └── sorting
-│       └── bubble-sort.go
-├── LICENSE
+│       ├── bubblesort.go
+│       └── selectionsort.go
 ├── python
 │   └── sorting
-│       └── bubble-sort.py
+│       └── bubblesort.py
+├── LICENSE
 └── README.md
 ```
