@@ -3,13 +3,6 @@ package main
 import "fmt"
 
 
-func swap(a *string, b *string){
-	tmp := *a
-	*a = *b
-	*b = tmp
-}
-
-
 func bubbleSorted(a []string) (int, []string) {
 	length := len(a)
 	iteration := 0
@@ -20,7 +13,7 @@ func bubbleSorted(a []string) (int, []string) {
 			if len(a[x]) > len(a[x+1]) {
 				// fmt.Println("Swapping", x, "and", x+1)
 				swapped = true
-				swap(&a[x], &a[x+1])
+				a[x], a[x+1] = a[x+1], a[x]
 			}
 		}
 		// If the last iteration did not swap anything,
