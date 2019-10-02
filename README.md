@@ -9,6 +9,7 @@ My data structure practice.
 ├── python
 │   └── sorting
 │       ├── bubblesort.py
+│       ├── insertionsort.py
 │       └── selectionsort.py
 ├── LICENSE
 └── README.md
