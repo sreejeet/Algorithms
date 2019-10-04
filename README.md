@@ -3,14 +3,15 @@ My data structure practice.
 ```
 .
 ├── golang
-│   └── sorting
-│       ├── bubblesort.go
-│       └── selectionsort.go
+│   └── sorting
+│       ├── bubblesort.go
+│       └── selectionsort.go
 ├── python
-│   └── sorting
-│       ├── bubblesort.py
-│       ├── insertionsort.py
-│       └── selectionsort.py
+│   └── sorting
+│       ├── bubblesort.py
+│       ├── insertionsort.py
+│       ├── mergesort.py
+│       └── selectionsort.py
 ├── LICENSE
 └── README.md
 ```
