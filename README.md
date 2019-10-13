@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-	<h1>Directory Tree</h1><p>
+	<h3>Pull requests will not be accepted. This repo was created to showcase my practice.<br>Please consider contributing to my other repositories.</h3>
+	<h4>Data structures and Algorithms</h4><p>
 	<a href=""></a><br>
 	├── <a href="/python/">python</a><br>
 	│   └── <a href="/python/sorting/">sorting</a><br>
