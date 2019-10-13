@@ -9,6 +9,7 @@
 │       ├── bubblesort.py
 │       ├── insertionsort.py
 │       ├── mergesort.py
+│       ├── quicksort.py
 │       └── selectionsort.py
 ├── LICENSE
 └── README.md
