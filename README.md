@@ -2,7 +2,7 @@
 .
 ├── golang
 │   └── sorting
-│       ├── bubblesort.go
+│       ├── [bubblesort.go](golang/sorting/bubblesort.go)
 │       └── selectionsort.go
 ├── python
 │   └── sorting
