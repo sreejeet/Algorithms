@@ -1,16 +1,14 @@
-```
-.
-├── golang
-│   └── sorting
-│       ├── [bubblesort.go](golang/sorting/bubblesort.go)
-│       └── selectionsort.go
-├── python
-│   └── sorting
-│       ├── bubblesort.py
-│       ├── insertionsort.py
-│       ├── mergesort.py
-│       ├── quicksort.py
-│       └── selectionsort.py
-├── LICENSE
-└── README.md
-```
+`.`<br>
+`├── golang`<br>
+`│   └── sorting`<br>
+`│       ├── `[`bubblesort.go`](golang/sorting/bubblesort.go)<br>
+`│       └── `[`selectionsort.go`](golang/sorting/bubblesort.go)<br>
+`├── python`<br>
+`│   └── `[`sorting`](python/sorting)<br>
+`│       ├── `[`bubblesort.py`](python/sorting/bubblesort.py)<br>
+`│       ├── `[`insertionsort.py`](python/sorting/insertionsort.py)<br>
+`│       ├── `[`mergesort.py`](python/sorting/mergesort.py)<br>
+`│       ├── `[`quicksort.py`](python/sorting/quicksort.py)<br>
+`│       └── `[`selectionsort.py`](python/sorting/selectionsort.py)<br>
+`├── LICENSE`<br>
+`└── README.md`<br>
