@@ -2,19 +2,20 @@
 <html>
 <body>
 	<h1>Directory Tree</h1><p>
-	    <a href="/python/">python</a><br>
-	        <a href="/python/sorting/">sorting</a><br>
-	    &nbsp;&nbsp;&nbsp;     <a href="/python/sorting/bubblesort.py">bubblesort.py</a><br>
-	    &nbsp;&nbsp;&nbsp;     <a href="/python/sorting/selectionsort.py">selectionsort.py</a><br>
-	    &nbsp;&nbsp;&nbsp;     <a href="/python/sorting/insertionsort.py">insertionsort.py</a><br>
-	    &nbsp;&nbsp;&nbsp;     <a href="/python/sorting/mergesort.py">mergesort.py</a><br>
-	    &nbsp;&nbsp;&nbsp;     <a href="/python/sorting/quicksort.py">quicksort.py</a><br>
-	    <a href="/golang/">golang</a><br>
-	        <a href="/golang/sorting/">sorting</a><br>
-	    &nbsp;&nbsp;&nbsp;     <a href="/golang/sorting/bubblesort.go">bubblesort.go</a><br>
-	    &nbsp;&nbsp;&nbsp;     <a href="/golang/sorting/selectionsort.go">selectionsort.go</a><br>
-	    <a href="/LICENSE">LICENSE</a><br>
-	    <a href="/README.md">README.md</a><br>
+	<a href=""></a><br>
+	├── <a href="/python/">python</a><br>
+	│   └── <a href="/python/sorting/">sorting</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="/python/sorting/bubblesort.py">bubblesort.py</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="/python/sorting/selectionsort.py">selectionsort.py</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="/python/sorting/insertionsort.py">insertionsort.py</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="/python/sorting/mergesort.py">mergesort.py</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="/python/sorting/quicksort.py">quicksort.py</a><br>
+	├── <a href="/golang/">golang</a><br>
+	│   └── <a href="/golang/sorting/">sorting</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="/golang/sorting/bubblesort.go">bubblesort.go</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="/golang/sorting/selectionsort.go">selectionsort.go</a><br>
+	├── <a href="/LICENSE">LICENSE</a><br>
+	└── <a href="/README.md">README.md</a><br>
 	<br><br>
 	</p>
 	<p>
