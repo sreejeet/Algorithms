@@ -92,3 +92,18 @@ if __name__ == '__main__':
     ll.traverse()
 
     ll.search(3)
+
+
+""" Output
+2 3 2 1 
+5 not found.
+5 2 3 2 1 
+Found 5 at node 1.
+Deleted 2 at 2
+5 3 2 1 
+Found 1 at node 4.
+Found 2 at node 3.
+Deleted 5 at 1
+3 2 1 
+Found 3 at node 1.
+"""
