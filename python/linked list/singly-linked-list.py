@@ -7,6 +7,9 @@ class Node(object):
     def getValue(self):
         return self.value
 
+    def setValue(self, value):
+        self.value = value
+
     def getNext(self):
         return self.next_node
 
@@ -35,6 +38,21 @@ class LinkedList(object):
             print(f"{value} not found.")
             return False
         print(f"Found {value} at node {counter}.")
+        return True
+
+    def update(self, value, new_value):
+        current = self.head
+        counter = 0
+        while current:
+            counter += 1
+            if current.getValue() == value:
+                break
+            current = current.getNext()
+        if current is None:
+            print(f"{value} not found.")
+            return False
+        current.setValue(new_value)
+        print(f"Updated {value} to {new_value} at node {counter}.")
         return True
 
     def delete(self, value):
@@ -93,6 +111,8 @@ if __name__ == '__main__':
 
     ll.search(3)
 
+    ll.update(3, 33)
+    ll.traverse()
 
 """ Output
 2 3 2 1 
@@ -106,4 +126,6 @@ Found 2 at node 3.
 Deleted 5 at 1
 3 2 1 
 Found 3 at node 1.
+Updated 3 to 33 at node 1.
+33 2 1 
 """
