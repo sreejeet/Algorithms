@@ -13,6 +13,9 @@ class Node:
     def getPrev(self):
         return self.prev
 
+    def setValue(self, value):
+        self.value = value
+
     def setNext(self, new_next):
         self.next = new_next
 
@@ -139,6 +142,33 @@ class DoublyLinkedList:
         current.getPrev().setNext(current.getNext())
         return True
 
+    def search(self, value):
+        current = self.getHead()
+        counter = 0
+        while current:
+            counter += 1
+            if current.getValue() == value:
+                print(f"Found {value} at {counter}.")
+                return current
+            current = current.getNext()
+
+        print(f"{value} not found.")
+        return False
+
+    def update(self, value, new_value):
+        current = self.getHead()
+        counter = 0
+        while current:
+            counter += 1
+            if current.getValue() == value:
+                current.setValue(new_value)
+                print(f"Updated {value} to {new_value} at node {counter}.")
+                return current
+            current = current.getNext()
+
+        print(f"{value} not found.")
+        return False
+
     def traverse(self):
 
         forward = []
@@ -183,6 +213,9 @@ if __name__ == '__main__':
 
     ll.traverse()
 
+    ll.search(0)
+    ll.update(0, 100)
+    ll.traverse()
 
 """ Output
 [12, 10, 8, 6, 4, 2, 0, 1, 3, 5, 9, 11, 13]
