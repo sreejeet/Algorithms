@@ -7,11 +7,14 @@ class Node(object):
     def getValue(self):
         return self.value
 
+    def setValue(self, value):
+        self.value = value
+
     def getNext(self):
         return self.next_node
 
-    def setNext(self, new_next):
-        self.next_node = new_next
+    def setNext(self, next_node):
+        self.next_node = next_node
 
 
 class CircularLinkedList: 
@@ -75,6 +78,35 @@ class CircularLinkedList:
         
         return False
 
+    def search(self, value):
+        head = self.getHead()
+        current = head
+        counter = 0
+        while current:
+            counter += 1
+            if current.getValue() == value:
+                print(f"Found {value} at {counter}.")
+                return current
+            current = current.getNext()
+            if current == head:
+                break
+        return False
+
+    def update(self, value, new_value):
+        head = self.getHead()
+        current = head
+        counter = 0
+        while current:
+            counter += 1
+            if current.getValue() == value:
+                current.setValue(new_value)
+                print(f"Updated {value} to {new_value} at node {counter}.")
+                return current
+            current = current.getNext()
+            if current == head:
+                break
+        return False
+
     def traverse(self):
         head = self.getHead()
         current = head
@@ -96,6 +128,7 @@ ll.insert(2)
 ll.traverse()
 ll.insert(1)
 ll.traverse()
+
 ll.delete(3)
 ll.traverse()
 ll.delete(1)
@@ -103,6 +136,16 @@ ll.traverse()
 ll.delete(2)
 ll.traverse()
 
+ll.insert(5)
+ll.insert(4)
+ll.insert(3)
+ll.insert(2)
+ll.insert(1)
+ll.traverse()
+
+ll.search(4)
+ll.update(4, 44)
+ll.traverse()
 
 """ Output
 3 
@@ -111,4 +154,8 @@ ll.traverse()
 1 2 
 2 
 
+1 2 3 4 5 
+Found 4 at 4.
+Updated 4 to 44 at node 4.
+1 2 3 44 5 
 """
