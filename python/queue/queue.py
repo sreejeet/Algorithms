@@ -1,16 +1,16 @@
-stack = []
+queue = []
 
-stack.append(1)
-stack.append(2)
-stack.append(3)
-stack.append(4)
+queue.append(1)
+queue.append(2)
+queue.append(3)
+queue.append(4)
 
-print(stack)
+print(queue)
 
-print(stack.pop(0))
-print(stack.pop(0))
+print(queue.pop(0))
+print(queue.pop(0))
 
-print(stack)
+print(queue)
 
 """ Output
 [1, 2, 3, 4]
