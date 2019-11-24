@@ -6,20 +6,22 @@
 	<h4>Data structures and Algorithms</h4><p>
 	<a href=""></a><br>
 	├── <a href="/python/">python</a><br>
-	│   ├── <a href="/python/queue/">queue</a><br>
-	│   │   └── <a href="/python/queue/queue.py">queue.py</a><br>
+	│   ├── <a href="/python/tree/">tree</a><br>
+	│   │   └── <a href="/python/tree/binary-tree.py">binary-tree.py</a><br>
 	│   ├── <a href="/python/stack/">stack</a><br>
 	│   │   └── <a href="/python/stack/stack.py">stack.py</a><br>
-	│   ├── <a href="/python/sorting/">sorting</a><br>
-	│   │   ├── <a href="/python/sorting/selectionsort.py">selectionsort.py</a><br>
-	│   │   ├── <a href="/python/sorting/quicksort.py">quicksort.py</a><br>
-	│   │   ├── <a href="/python/sorting/mergesort.py">mergesort.py</a><br>
-	│   │   ├── <a href="/python/sorting/insertionsort.py">insertionsort.py</a><br>
-	│   │   └── <a href="/python/sorting/bubblesort.py">bubblesort.py</a><br>
-	│   └── <a href="/python/linked%20list/">linked list</a><br>
-	│   &nbsp;&nbsp;&nbsp; ├── <a href="/python/linked%20list/circular-linked-list.py">circular-linked-list.py</a><br>
-	│   &nbsp;&nbsp;&nbsp; ├── <a href="/python/linked%20list/doubly-linked-list.py">doubly-linked-list.py</a><br>
-	│   &nbsp;&nbsp;&nbsp; └── <a href="/python/linked%20list/singly-linked-list.py">singly-linked-list.py</a><br>
+	│   ├── <a href="/python/queue/">queue</a><br>
+	│   │   └── <a href="/python/queue/queue.py">queue.py</a><br>
+	│   ├── <a href="/python/linked%20list/">linked list</a><br>
+	│   │   ├── <a href="/python/linked%20list/singly-linked-list.py">singly-linked-list.py</a><br>
+	│   │   ├── <a href="/python/linked%20list/doubly-linked-list.py">doubly-linked-list.py</a><br>
+	│   │   └── <a href="/python/linked%20list/circular-linked-list.py">circular-linked-list.py</a><br>
+	│   └── <a href="/python/sorting/">sorting</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="/python/sorting/bubblesort.py">bubblesort.py</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="/python/sorting/quicksort.py">quicksort.py</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="/python/sorting/mergesort.py">mergesort.py</a><br>
+	│   &nbsp;&nbsp;&nbsp; ├── <a href="/python/sorting/insertionsort.py">insertionsort.py</a><br>
+	│   &nbsp;&nbsp;&nbsp; └── <a href="/python/sorting/selectionsort.py">selectionsort.py</a><br>
 	├── <a href="/golang/">golang</a><br>
 	│   └── <a href="/golang/sorting/">sorting</a><br>
 	│   &nbsp;&nbsp;&nbsp; ├── <a href="/golang/sorting/selectionsort.go">selectionsort.go</a><br>
@@ -30,7 +32,7 @@
 	</p>
 	<p>
 
-7 directories, 14 files
+8 directories, 15 files
 	<br><br>
 	</p>
 	<hr>
