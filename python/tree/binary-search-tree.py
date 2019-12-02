@@ -102,6 +102,49 @@ class BinarySearchTree:
             return self.max(current.right)
         return current
 
+    def delete(self, value, node=None, parent=None, relation='orphan', message='Deleted'):
+        if not self.root:
+            print("Empty tree")
+            return
+
+        if not node:
+            node = self.root
+
+        while node:
+
+            if node.value == value:
+                if node.left or node.right:
+                    if node.left:
+                        replace = self.max(node.left)
+                        new_val = replace.value
+                        self.delete(replace.value, node.left, node, 'left', 'Moved')
+                        node.value = new_val
+                    else:
+                        replace = self.min(node.right)
+                        new_val = replace.value
+                        self.delete(replace.value, node.right, node, 'right', 'Moved')
+                        node.value = new_val
+                else:
+                    if relation == 'left':
+                        parent.left = None
+                    elif relation == 'right':
+                        parent.right = None
+                    elif relation == 'orphan':
+                        self.root = node.left
+
+                print(f"{message} {value}, child of {parent.value if parent else 'no one'}, related as {relation}")
+                return
+
+            parent = node
+            if value > node.value:
+                relation = 'right'
+                node = node.right
+            else:
+                relation = 'left'
+                node = node.left
+
+        print(f"Node with value {value} not found")
+
     def traverse(self, order='inorder', current=None):
         if not self.root:
             print("Empty tree")
@@ -121,50 +164,6 @@ class BinarySearchTree:
         if order=='postorder':
             print(current.value)
 
-    def delete(self, value, node=None, parent=None, relation='orphan', message='Deleted'):
-        if not self.root:
-            print("Empty tree")
-            return
-
-        if not node:
-            node = self.root
-
-        while node:
-
-            if node.value == value:
-                if node.left or node.right:
-                    if node.left:
-                        replace = self.min(node.left)
-                        new_val = replace.value
-                        self.delete(replace.value, node.left, node, 'left', 'Moved')
-                        node.value = new_val
-                        # print("D1")
-                    else:
-                        replace = self.min(node.right)
-                        new_val = replace.value
-                        self.delete(replace.value, node.right, node, 'right', 'Moved')
-                        node.value = new_val
-                        # print("D2")
-                else:
-                    if relation == 'left':
-                        parent.left = None
-                        # print("D3")
-                    else:
-                        parent.right = None
-                        # print("D4")
-
-                print(f"{message} {value}, child of {parent.value if parent else 'no one'}, related as {relation}")
-                return
-
-            parent = node
-            if value > node.value:
-                relation = 'right'
-                node = node.right
-            else:
-                relation = 'left'
-                node = node.left
-
-        print(f"Node with value {value} not found")
 
 if __name__=='__main__':
 
@@ -174,34 +173,22 @@ if __name__=='__main__':
     Max recursion depth is 1000.
     End is exclusive
     """
-    # for iteration in range(100000):
     start = 0
     end = 20
     tree = BinarySearchTree()
 
     #  Random insertion
-    # nums = []
-    # while len(nums) <= end-start-1:
-    #     x = randrange(start, end)
-    #     if x not in nums:
-    #         tree.insert(x)
-    #         nums.append(x)
+    nums = []
+    while len(nums) <= end-start-1:
+        x = randrange(start, end)
+        if x not in nums:
+            tree.insert(x)
+            nums.append(x)
 
-    # Ordered insertion
-    # nums = [0, 17, 1, 6, 9, 7, 3, 5, 14, 12, 15, 16, 10, 11, 4, 19, 8, 18, 2, 13]
-    # nums = [3, 5, 7, 4, 8, 13, 17, 6, 9, 15, 10, 11, 16, 0, 14, 19, 18, 1, 12, 2]
-    # nums = [15, 16, 2, 18, 9, 0, 10, 1, 19, 6, 17, 5, 13, 11, 14, 3, 7, 12, 8, 4]
-    # nums = [0, 3, 4, 2, 1]
-    # Bug in these inputs:
-    nums = [19, 5, 9, 3, 0, 18, 8, 15, 12, 4, 2, 13, 6, 1, 10, 7, 16, 17, 14, 11]
-    # nums = [14, 16, 2, 6, 10, 13, 19, 5, 15, 12, 11, 7, 4, 9, 0, 3, 1, 18, 8, 17]
-    for x in nums:
-        tree.insert(x)
-
+    # Tree info
     print(f"Inserted in order\n{nums}")
-    # print(f"Min and max are {tree.min().value} and {tree.max().value}")
-    # print(f"Height of tree is {tree.height()}")
-
+    print(f"Min and max are {tree.min().value} and {tree.max().value}")
+    print(f"Height of tree is {tree.height()}")
     print(f"Total nodes: {tree.len()}")
 
     # Deletions
@@ -212,48 +199,50 @@ if __name__=='__main__':
         print(f"{tree.root.value}")
         print(f"Total nodes: {tree.len()}")
 
-
-    # print(f"{iteration+1}. Traversing inorder:")
+    print(f"Traversing inorder:")
     tree.traverse()
 
 
 """ Output
 Inserted in order
-[0, -5, 3, -2, -4, -1, 4, 2, -3, 1]
-Traversing preorder:
+[0, 10, 1, 17, 8, 9, 13, 11, 12, 14, 18, 6, 2, 19, 3, 4, 16, 7, 15, 5]
+Min and max are 0 and 19
+Height of tree is 9
+Total nodes: 20
+
+Moved 9, child of 8, related as right
+Deleted 10, child of 0, related as right
 0
--5
--2
--4
--3
--1
-3
-2
+Total nodes: 19
+
+Moved 5, child of 4, related as right
+Moved 4, child of 3, related as right
+Moved 3, child of 2, related as right
+Moved 2, child of 6, related as left
+Moved 1, child of 9, related as left
+Deleted 0, child of no one, related as orphan
 1
-4
+Total nodes: 18
+
+Deleted 19, child of 18, related as right
+1
+Total nodes: 17
 Traversing inorder:
--5
--4
--3
--2
--1
-0
 1
 2
 3
 4
-Traversing postorder:
--3
--4
--1
--2
--5
-1
-2
-4
-3
-0
-Min is -5
-Max is 4
-Found 2
+5
+6
+7
+8
+9
+11
+12
+13
+14
+15
+16
+17
+18
 """
