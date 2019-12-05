@@ -164,6 +164,22 @@ class BinarySearchTree:
         if order=='postorder':
             print(current.value)
 
+    def traverse_levelorder(self):
+        if not self.root:
+            print("Empty tree")
+            return
+
+        q = []
+        q.append(self.root)
+
+        while q:
+            current = q.pop(0)
+            print(current.value)
+            if current.left:
+                q.append(current.left)
+            if current.right:
+                q.append(current.right)
+
 
 if __name__=='__main__':
 
@@ -173,7 +189,7 @@ if __name__=='__main__':
     Max recursion depth is 1000.
     End is exclusive
     """
-    start = 0
+    start = 1
     end = 20
     tree = BinarySearchTree()
 
@@ -184,6 +200,11 @@ if __name__=='__main__':
         if x not in nums:
             tree.insert(x)
             nums.append(x)
+
+    #  Iterative insertion
+    # nums = [13, 19, 2, 11, 3, 7, 14, 6, 12, 16, 1, 9, 18, 17, 15, 4, 10, 8, 5]
+    # for x in nums:
+    #     tree.insert(x)
 
     # Tree info
     print(f"Inserted in order\n{nums}")
@@ -202,33 +223,30 @@ if __name__=='__main__':
     print(f"Traversing inorder:")
     tree.traverse()
 
+    print(f"Traversing levelorder:")
+    tree.traverse_levelorder()
+
+
 
 """ Output
 Inserted in order
-[0, 10, 1, 17, 8, 9, 13, 11, 12, 14, 18, 6, 2, 19, 3, 4, 16, 7, 15, 5]
-Min and max are 0 and 19
+[18, 13, 12, 7, 17, 16, 2, 14, 3, 6, 5, 9, 11, 1, 15, 4, 8, 10, 19]
+Min and max are 1 and 19
 Height of tree is 9
-Total nodes: 20
-
-Moved 9, child of 8, related as right
-Deleted 10, child of 0, related as right
-0
 Total nodes: 19
 
-Moved 5, child of 4, related as right
-Moved 4, child of 3, related as right
-Moved 3, child of 2, related as right
-Moved 2, child of 6, related as left
-Moved 1, child of 9, related as left
-Deleted 0, child of no one, related as orphan
-1
+Deleted 10, child of 11, related as left
+18
 Total nodes: 18
 
-Deleted 19, child of 18, related as right
-1
+Deleted 1, child of 2, related as left
+18
 Total nodes: 17
+
+Deleted 19, child of 18, related as right
+18
+Total nodes: 16
 Traversing inorder:
-1
 2
 3
 4
@@ -245,4 +263,21 @@ Traversing inorder:
 16
 17
 18
+Traversing levelorder:
+18
+13
+12
+17
+7
+16
+2
+9
+14
+3
+8
+11
+15
+6
+5
+4
 """
