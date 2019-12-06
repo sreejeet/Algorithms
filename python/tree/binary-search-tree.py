@@ -181,7 +181,7 @@ class BinarySearchTree:
 
 if __name__=='__main__':
 
-    from random import randrange, choice
+    from random import randrange
 
     """ 
     Max recursion depth is 1000.
