@@ -1,26 +1,45 @@
+from math import floor
 import heapq
-from random import randrange
 
-start = 1
-end = 20
+class MinHeap:
+    def __init__(self):
+        self.heap = []
 
-heap = []
-order = []
-heapq.heapify(heap)
+    def insert(self, value):
+        # Inserting at end
+        self.heap.append(value)
 
-while len(heap) <= end-start-1:
-    x = randrange(start, end)
-    heapq.heappush(heap, x)
-    order.append(x)
+        # Now moving up while lesser than parent
+        pos = len(self.heap)-1
+        if pos != -1:
+            parent = floor(pos/2)
+            while self.heap[pos] < self.heap[parent]:
+                self.heap[parent], self.heap[pos] = self.heap[pos], self.heap[parent]
+                pos = parent
+                parent = floor(pos/2)
 
-print(f"Inserted in order {order}")
-del order
+    def traverse(self):
+        return self.heap
 
-l = len(heap)/2
-print("Popping half the elements")
-while len(heap) > l:
-    print(f"{heapq.heappop(heap)}", end=' ')
-else:
-    print()
 
-print(f"Remaining elements in heap\n{heap}")
+if __name__ == '__main__':
+
+    from random import randrange
+
+    start = 1
+    end = 10
+    heap = MinHeap()
+
+    #  Random insertion
+    nums = []
+    while len(nums) <= end-start-1:
+        x = randrange(start, end)
+        if x not in nums:
+            heap.insert(x)
+            nums.append(x)
+
+    print(f"Inserted in order {nums}")
+    heapq.heapify(nums)
+    
+    print(nums)
+    print(heap.traverse())
