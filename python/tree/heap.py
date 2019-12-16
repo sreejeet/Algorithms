@@ -1,6 +1,7 @@
 from math import floor
 import heapq
 
+
 class MinHeap:
     def __init__(self):
         self.heap = []
@@ -70,6 +71,7 @@ class MinHeap:
                 break
 
         return val
+
 
 if __name__ == '__main__':
 
