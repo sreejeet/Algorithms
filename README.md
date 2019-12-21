@@ -7,6 +7,7 @@
 	<a href=""></a><br>
 	├── <a href="/python/">python</a><br>
 	│   ├── <a href="/python/sorting/">sorting</a><br>
+	│   │   ├── <a href="/python/sorting/shellsort.py">shellsort.py</a><br>
 	│   │   ├── <a href="/python/sorting/heapsort.py">heapsort.py</a><br>
 	│   │   ├── <a href="/python/sorting/selectionsort.py">selectionsort.py</a><br>
 	│   │   ├── <a href="/python/sorting/quicksort.py">quicksort.py</a><br>
@@ -34,7 +35,7 @@
 	</p>
 	<p>
 
-8 directories, 17 files
+8 directories, 18 files
 	<br><br>
 	</p>
 	<hr>
