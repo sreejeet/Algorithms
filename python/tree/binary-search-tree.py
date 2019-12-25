@@ -187,12 +187,12 @@ if __name__=='__main__':
     Max recursion depth is 1000.
     End is exclusive
     """
-    start = 1
-    end = 20
     tree = BinarySearchTree()
 
     #  Random insertion
     nums = []
+    start = 1
+    end = 20
     while len(nums) <= end-start-1:
         x = randrange(start, end)
         if x not in nums:
@@ -200,7 +200,7 @@ if __name__=='__main__':
             nums.append(x)
 
     #  Iterative insertion
-    # nums = [13, 19, 2, 11, 3, 7, 14, 6, 12, 16, 1, 9, 18, 17, 15, 4, 10, 8, 5]
+    # nums = [4,3,2,1]
     # for x in nums:
     #     tree.insert(x)
 
@@ -211,7 +211,7 @@ if __name__=='__main__':
     print(f"Total nodes: {tree.len()}")
 
     # Deletions
-    for x in [(start + end) // 2, start, end-1]:
+    for x in set([nums[(len(nums)//2)-1] // 2, tree.min().value, tree.max().value]):
         print()
         node = tree.search(x)
         tree.delete(node.value)
@@ -223,7 +223,6 @@ if __name__=='__main__':
 
     print(f"Traversing levelorder:")
     tree.traverse_levelorder()
-
 
 
 """ Output
