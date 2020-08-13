@@ -84,6 +84,23 @@ class LinkedList(object):
             current = current.getNext()
         print()
 
+    def reverse(self):
+        if self.head == None:
+            print("Cannot reverse empty linked list")
+            return
+
+        prev_n = self.head
+        next_n = self.head.next_node
+        self.head.next_node = None
+
+        while next_n:
+            tmp = next_n
+            next_n = next_n.next_node
+            tmp.next_node = prev_n
+            prev_n = tmp
+
+        self.head = prev_n
+
 
 if __name__ == '__main__':
     ll = LinkedList()
@@ -112,6 +129,9 @@ if __name__ == '__main__':
     ll.search(3)
 
     ll.update(3, 33)
+    ll.traverse()
+
+    ll.reverse()
     ll.traverse()
 
 """ Output
