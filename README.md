@@ -2,8 +2,8 @@
 <html>
 <!-- tree --dirsfirst -trH '' -->
 <body>
-	<h3>Pull requests will not be accepted. This repo was created to showcase my practice.<br>Please consider contributing to my other repositories.</h3>
-	<h4>Data structures and Algorithms</h4><p>
+	<h6>Pull requests will not be accepted. This repo was created to showcase my practice.<br>Please consider contributing to my other repositories.</h3>
+	<h1>Data structures and Algorithms</h4><p>
 	<a href=""></a><br>
 	├── <a href="/golang/">golang</a><br>
 	│   ├── <a href="/golang/linked%20list/">linked list</a><br>
@@ -38,15 +38,15 @@
 	<p>
 
 9 directories, 19 files
-	<br><br>
-	</p>
-	<hr>
-	<p class="VERSION">
-		 tree v1.7.0 © 1996 - 2014 by Steve Baker and Thomas Moore <br>
-		 HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
-		 JSON output hacked and copyleft © 2014 by Florian Sesser <br>
-		 Charsets / OS/2 support © 2001 by Kyosuke Tokoro
-	</p>
+<br><br>
+</p>
+<hr>
+<p class="VERSION">
+tree v1.7.0 © 1996 - 2014 by Steve Baker and Thomas Moore <br>
+HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
+JSON output hacked and copyleft © 2014 by Florian Sesser <br>
+Charsets / OS/2 support © 2001 by Kyosuke Tokoro
+</p>
 
 </body>
 </html>
