@@ -40,7 +40,7 @@ class BinarySearchTree:
 
         if value > node.value and node.right:
             return self.search(value, node.right)
-        elif value <  node.value and node.left:
+        elif value < node.value and node.left:
             return self.search(value, node.left)
         elif value == node.value:
             return node
@@ -117,12 +117,14 @@ class BinarySearchTree:
                     if node.left:
                         replace = self.max(node.left)
                         new_val = replace.value
-                        self.delete(replace.value, node.left, node, 'left', 'Moved')
+                        self.delete(replace.value, node.left,
+                                    node, 'left', 'Moved')
                         node.value = new_val
                     else:
                         replace = self.min(node.right)
                         new_val = replace.value
-                        self.delete(replace.value, node.right, node, 'right', 'Moved')
+                        self.delete(replace.value, node.right,
+                                    node, 'right', 'Moved')
                         node.value = new_val
                 else:
                     if relation == 'left':
@@ -132,7 +134,8 @@ class BinarySearchTree:
                     elif relation == 'orphan':
                         self.root = node.left
 
-                print(f"{message} {value}, child of {parent.value if parent else 'no one'}, related as {relation}")
+                print(
+                    f"{message} {value}, child of {parent.value if parent else 'no one'}, related as {relation}")
                 return
 
             parent = node
@@ -146,23 +149,30 @@ class BinarySearchTree:
         print(f"Node with value {value} not found")
 
     def traverse(self, order='inorder', current=None):
+
         if not self.root:
             print("Empty tree")
             return
 
-        if not current:
-            current=self.root
+        def _recur_(order, current):
 
-        if order=='preorder':
-            print(current.value)
-        if current.left:
-            self.traverse(order, current.left)
-        if order=='inorder':
-            print(current.value)
-        if current.right:
-            self.traverse(order, current.right)
-        if order=='postorder':
-            print(current.value)
+            if not current:
+                current = self.root
+
+            if order == 'preorder':
+                print(current.value, end=" ")
+            if current.left:
+                _recur_(order, current.left)
+            if order == 'inorder':
+                print(current.value, end=" ")
+            if current.right:
+                _recur_(order, current.right)
+            if order == 'postorder':
+                print(current.value, end=" ")
+
+        _recur_(order, current)
+
+        print()
 
     def traverse_levelorder(self):
         if not self.root:
@@ -172,14 +182,16 @@ class BinarySearchTree:
         q = [self.root]
         while q:
             current = q.pop(0)
-            print(current.value)
+            print(current.value, end=" ")
             if current.left:
                 q.append(current.left)
             if current.right:
                 q.append(current.right)
 
+        print()
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
 
     from random import randrange
 
