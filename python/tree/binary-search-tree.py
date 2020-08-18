@@ -179,15 +179,14 @@ class BinarySearchTree:
             print("Empty tree")
             return
 
-        q = [self.root]
+        q = [(self.root, 1)]
         while q:
             current = q.pop(0)
-            print(current.value, end=" ")
-            if current.left:
-                q.append(current.left)
-            if current.right:
-                q.append(current.right)
-
+            print(current[0].value, "at level", current[1])
+            if current[0].left:
+                q.append((current[0].left, current[1]+1))
+            if current[0].right:
+                q.append((current[0].right, current[1]+1))
         print()
 
 
