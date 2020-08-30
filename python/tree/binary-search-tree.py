@@ -101,9 +101,12 @@ class BinarySearchTree:
         if not current:
             current = self.root
 
-        if current.right:
-            return self.max(current.right)
-        return current
+        tmp = current
+        while current:
+            tmp = current
+            current = current.right
+
+        return tmp
 
     def delete(self, value, node=None, parent=None, relation='orphan', message='Deleted'):
         if not self.root:
