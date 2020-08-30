@@ -86,9 +86,12 @@ class BinarySearchTree:
         if not current:
             current = self.root
 
-        if current.left:
-            return self.min(current.left)
-        return current
+        tmp = current
+        while current:
+            tmp = current
+            current = current.left
+
+        return tmp
 
     def max(self, current=None):
         if not self.root:
