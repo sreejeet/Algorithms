@@ -4,7 +4,8 @@
 <a href=""></a><br>
 ├── <a href="/python/">python</a><br>
 │   ├── <a href="/python/searching/">searching</a><br>
-│   │   └── <a href="/python/searching/binary-search.py">binary-search.py</a><br>
+│   │   ├── <a href="/python/searching/binary-search-recur.py">binary-search-recur.py</a><br>
+│   │   └── <a href="/python/searching/binary-search-iter.py">binary-search-iter.py</a><br>
 │   ├── <a href="/python/tree/">tree</a><br>
 │   │   ├── <a href="/python/tree/binary-search-tree.py">binary-search-tree.py</a><br>
 │   │   └── <a href="/python/tree/heap.py">heap.py</a><br>
@@ -31,6 +32,6 @@
 │   └── <a href="/golang/linked%20list/">linked list</a><br>
 │   &nbsp;&nbsp;&nbsp; └── <a href="/golang/linked%20list/singly-linked-list.go">singly-linked-list.go</a><br>
 ├── <a href="/tmp.test.py">tmp.test.py</a><br>
-├── <a href="/notes.txt">notes.txt</a><br>
 ├── <a href="/README.md">README.md</a><br>
+├── <a href="/notes.txt">notes.txt</a><br>
 └── <a href="/LICENSE">LICENSE</a>
