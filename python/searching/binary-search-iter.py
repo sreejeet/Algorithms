@@ -15,7 +15,7 @@ def bsearch(val, arr):
         m = l + ((r-l) // 2)
         if val == arr[m]:
             return m
-        elif val < arr[m]:
+        if val < arr[m]:
             r = m-1
         else:
             l = m+1

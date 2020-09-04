@@ -1,33 +1,30 @@
 def quicksorted(a):
-	if len(a) > 1:
-		# selecting pivot using
-		# median of 3 method
-		mid = len(a) // 2
-		if a[mid] < a[0]:
-			a[0], a[mid] = a[mid], a[0]
-		if a[-1] < a[0]:
-			a[-1], a[0] = a[0], a[-1]
-		if a[mid] < a[-1]:
-			a[-1], a[mid] = a[mid], a[-1]
-
-		pivot = a[-1]
-		L = []
-		R = []
-		M = []
-		for x in a:
-			if x < pivot:
-				L.append(x)
-			elif x == pivot:
-				M.append(x)
-			else:
-				R.append(x)
-		return \
-			(quicksorted(L)) +\
-			M +\
-			(quicksorted(R))
-	else:
+	if len(a) <= 1:
 		return a
 
+	# selecting pivot using
+	# median of 3 method
+	mid = len(a) // 2
+	if a[mid] < a[0]:
+		a[0], a[mid] = a[mid], a[0]
+	if a[-1] < a[0]:
+		a[-1], a[0] = a[0], a[-1]
+	if a[mid] < a[-1]:
+		a[-1], a[mid] = a[mid], a[-1]
+
+	pivot = a[-1]
+	L = []
+	R = []
+	M = []
+	for x in a:
+		if x < pivot:
+			L.append(x)
+		elif x == pivot:
+			M.append(x)
+		else:
+			R.append(x)
+
+	return (quicksorted(L)) + M + (quicksorted(R))
 
 if __name__ == '__main__':
 	a = [
