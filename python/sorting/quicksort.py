@@ -16,11 +16,11 @@ def quicksorted(a):
 		M = []
 		for x in a:
 			if x < pivot:
-				L += [x]
+				L.append(x)
 			elif x == pivot:
-				M += [x]
+				M.append(x)
 			else:
-				R += [x]
+				R.append(x)
 		return \
 			(quicksorted(L)) +\
 			M +\
