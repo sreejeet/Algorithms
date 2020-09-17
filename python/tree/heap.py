@@ -16,7 +16,7 @@ class MinHeap:
     def is_empty(self):
         return self.heap == []
 
-    def get(self):
+    def pop(self):
         if self.is_empty():
             print('Empty heap')
             return
@@ -31,12 +31,12 @@ class MinHeap:
 
         # Now moving up while lesser than parent
         pos = len(self.heap)-1
-        parent = floor(pos/2)
+        parent = pos//2
         hl = len(self.heap)
         while parent >= 0 and parent < hl and self.heap[pos] < self.heap[parent]:
             self.heap[parent], self.heap[pos] = self.heap[pos], self.heap[parent]
             pos = parent
-            parent = floor(pos/2)
+            parent = pos//2
 
     def pop(self):
         if self.is_empty():
@@ -103,7 +103,7 @@ if __name__ == '__main__':
         print(heap.traverse())
 
     print(f"Lenght of heap is {heap.length()}")
-    print(f"Smallest value in heap is {heap.get()}")
+    print(f"Smallest value in heap is {heap.pop()}")
 
 
 """ Output
