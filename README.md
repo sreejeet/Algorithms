@@ -1,7 +1,7 @@
 <h6>Pull requests will not be accepted. This repo was created to showcase my practice.<br>Please consider contributing to my other repositories.</h3>
 <h1>Data structures and Algorithms</h4><p>
 <!--
-tree --dirsfirst -trH ''
+tree --dirsfirst -I 'tmp*' -trH ''
 -->
 ├── <a href="/python/">python</a><br>
 │   ├── <a href="/python/tree/">tree</a><br>
@@ -33,7 +33,6 @@ tree --dirsfirst -trH ''
 │   │   └── <a href="/golang/sorting/bubblesort.go">bubblesort.go</a><br>
 │   └── <a href="/golang/linked%20list/">linked list</a><br>
 │   &nbsp;&nbsp;&nbsp; └── <a href="/golang/linked%20list/singly-linked-list.go">singly-linked-list.go</a><br>
-├── <a href="/tmp.test.py">tmp.test.py</a><br>
 ├── <a href="/README.md">README.md</a><br>
 ├── <a href="/notes.txt">notes.txt</a><br>
 └── <a href="/LICENSE">LICENSE</a>
