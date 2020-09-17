@@ -16,7 +16,7 @@ class MinHeap:
     def is_empty(self):
         return self.heap == []
 
-    def pop(self):
+    def peek(self):
         if self.is_empty():
             print('Empty heap')
             return
