@@ -83,16 +83,16 @@ if __name__ == '__main__':
 
     # Random insertion
     nums = []
-    while len(nums) <= end-start-1:
-        x = randrange(start, end)
-        if x not in nums:
-            heap.insert(x)
-            nums.append(x)
+    # while len(nums) <= end-start-1:
+    #     x = randrange(start, end)
+    #     if x not in nums:
+    #         heap.insert(x)
+    #         nums.append(x)
 
     # Iterative insertion
-    # nums = [4, 2, 7, 5, 8, 6, 3, 10, 11, 9]
-    # for x in nums:
-    #     heap.insert(x)
+    nums = [5, 4, 6, 3, 7, 9]
+    for x in nums:
+        heap.insert(x)
 
     print(f"Inserted in order {nums}")
 
